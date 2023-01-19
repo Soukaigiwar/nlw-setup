@@ -9,9 +9,16 @@ const prisma = new PrismaClient()
 
 app.register(cors)
 
-app.get('/', () => {
-    return "olá"
+app.get('/hello', async () => {
+    const habits = await prisma.habit.findMany({
+        where: {
+            title: {
+                startsWith: "Beber"
+            }
+        }
+    })
     
+    return habits
 })
 
 app.listen({

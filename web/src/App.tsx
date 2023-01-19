@@ -1,6 +1,12 @@
-export function App() {
+import Habit from "./components/Habit";
+
+export default function App() {
 
   return (
-    <h1>Hello world!</h1>
+    <>
+      <Habit completed={3} />
+      <Habit completed={10}/>
+      <Habit completed={20}/>
+    </>
   )
 }

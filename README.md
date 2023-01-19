@@ -39,3 +39,8 @@
     select framework React
     select TypeScript variant
     npm install // to install all dependencies previously configured
+
+    Fundamentos do react
+        Components: tudo que queremos reaproveitar / isolar
+        Propriedade: uma informação enviada para modificar um componente visual
+                     ou comportamentalmente

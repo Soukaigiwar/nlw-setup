@@ -44,3 +44,18 @@
         Components: tudo que queremos reaproveitar / isolar
         Propriedade: uma informação enviada para modificar um componente visual
                      ou comportamentalmente
+
+    npm i tailwindcss postcss autoprefixer -D // install all 3 at same time
+                                                 postcss provide automated tasks
+                                                 tailwindcss is a plugin from
+                                                 postcss and autoprefixer add 
+                                                 brower prefix like -webkit-
+    npx tailwindcss init -p // -p to create postcss.config.cjs too
+    create styles folder into src folder
+    create global.css file into src/style/ folder
+    install postcss and tailwind extensions on vscode to use them
+    on global.css file, add @tailwind base, utilities and components
+    to use tailwind must import the css file into App.tsx
+    on tailwind.config.cjs, into content array, add which files will get 
+        tailwind styles as well index.html on root folder.
+    

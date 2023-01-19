@@ -1,4 +1,5 @@
-import Habit from "./components/Habit";
+import './styles/global.css'
+import Habit from "./components/Habit"
 
 export default function App() {
 

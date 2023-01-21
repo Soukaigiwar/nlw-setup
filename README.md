@@ -58,4 +58,6 @@
     to use tailwind must import the css file into App.tsx
     on tailwind.config.cjs, into content array, add which files will get 
         tailwind styles as well index.html on root folder.
+
+    day 2 - 58"
     

@@ -4,7 +4,17 @@ interface HabitProps {
 
 export default function Habit(props: HabitProps) {
     return (
-        <div className="bg-zinc-900 w-10 h-10 text-white rounded-lg m-2 flex items-center justify-center">
+        <div className="
+            bg-zinc-900
+            text-white
+            w-10
+            h-10
+            rounded
+            m-2
+            flex
+            items-center
+            justify-center
+        ">
             {props.completed}
         </div>
     )

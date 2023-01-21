@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { 
+import {
   useFonts,
   Inter_400Regular,
   Inter_600SemiBold,
   Inter_700Bold,
   Inter_800ExtraBold
 } from '@expo-google-fonts/inter'
+import { Loading } from './src/components/Loading';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,7 +18,7 @@ export default function App() {
   })
 
   if (!fontsLoaded) {
-    return
+    return (<Loading />)
   }
 
   return (
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: 'red'
+    color: '#FFFFFF',
+    fontFamily: 'Inter_800ExtraBold'
   }
 });

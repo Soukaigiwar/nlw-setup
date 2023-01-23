@@ -43,7 +43,7 @@ export function New() {
                     Qual seu compromentimento?
                 </Text>
                 <TextInput
-                    className="h-12 pl-4 mt-3 rounded-lg bg-zinc-800 text-white focus:border-2 focus:border-green-600"
+                    className="h-12 pl-4 mt-3 rounded-lg bg-zinc-900 text-white border-2 border-zinc-800 focus:border-green-600 "
                     placeholder="Ex.: Exercícios, Dormir bem, Beber água..."
                     placeholderTextColor={colors.zinc[400]}
                 />

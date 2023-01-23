@@ -1,7 +1,9 @@
 import { useState } from "react"
-import { ScrollView, View, Text, TextInput } from "react-native"
+import { ScrollView, View, Text, TouchableOpacity, TextInput } from "react-native"
 import { BackButton } from "../components/BackButton"
 import { Checkbox } from "../components/Checkbox"
+import { Feather } from "@expo/vector-icons"
+import colors from "tailwindcss/colors"
 
 const availableWeekDays = [
     'Domingo',
@@ -26,7 +28,10 @@ export function New() {
 
     return (
         <View className="flex-1 bg-background px-8 pt-16">
-            <ScrollView showsVerticalScrollIndicator={false}>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ paddingBottom: 32 }}
+            >
 
                 <BackButton />
 
@@ -37,7 +42,11 @@ export function New() {
                 <Text className="mt-6 text-white font-semibold text-base">
                     Qual seu compromentimento?
                 </Text>
-                <TextInput className="h-12 pl-4 mt-3 rounded-lg bg-zinc-800 text-white focus:border-2 focus:border-green-600" />
+                <TextInput
+                    className="h-12 pl-4 mt-3 rounded-lg bg-zinc-800 text-white focus:border-2 focus:border-green-600"
+                    placeholder="Ex.: Exercícios, Dormir bem, Beber água..."
+                    placeholderTextColor={colors.zinc[400]}
+                />
 
                 <Text className="mt-6 mb-6 text-white font-semibold text-base">
                     Qual a recorrência?
@@ -53,6 +62,20 @@ export function New() {
                         />
                     ))
                 }
+
+                <TouchableOpacity
+                    className="w-full h-14 flex-row items-center justify-center bg-green-600 rounded-md mt-6"    
+                >
+                    <Feather
+                        name="check"
+                        size={20}
+                        color={colors.white}
+                    />
+
+                    <Text className="font-semibold text-base text-white ml-2">
+                        Confirmar
+                    </Text>
+                </TouchableOpacity>
 
             </ScrollView>
         </View>
